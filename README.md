@@ -8,7 +8,8 @@ the class that inherits the genericSelector class implements the specific logic 
 - **PrimeDrinksProductServiceTest** is the test class that covers both PrimeDrinksProductService (the implementation class) and GenericSelector methods invoked from the first one
 
 # example method
-`public Wrappers.GetProductsWrapper getOpportunityProducts(Integer pageNumber, Integer pageSize, String productName, Id opportunityId) {
+```
+public Wrappers.GetProductsWrapper getOpportunityProducts(Integer pageNumber, Integer pageSize, String productName, Id opportunityId) {
         Wrappers.GetProductsWrapper productsData = new Wrappers.GetProductsWrapper();
         try {
             Set<String> productIds = new PrimeDrinksOppProductsService().getOppProductIds(opportunityId);
@@ -38,4 +39,5 @@ the class that inherits the genericSelector class implements the specific logic 
         }
 
         return productsData;
-    }`
+    }
+    ```
