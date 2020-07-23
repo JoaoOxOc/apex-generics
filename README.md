@@ -40,4 +40,3 @@ public Wrappers.GetProductsWrapper getOpportunityProducts(Integer pageNumber, In
 
         return productsData;
     }
-    ```
