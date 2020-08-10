@@ -1,5 +1,5 @@
 @IsTest
-public class PrimeDrinksProductServiceTest {
+public class ProductServiceTest {
     @IsTest public static Product2 populateMockData() {
         Product2 acc = new Product2();
         acc.Name = 'Product2 test';
@@ -8,16 +8,16 @@ public class PrimeDrinksProductServiceTest {
         return acc;
     }
 
-    @IsTest(SeeAllData=true) public static void testPrimeDrinksProductService() {
+    @IsTest(SeeAllData=true) public static void testProductService() {
     	// Instantiate a new controller with all parameters in the page
-    	PrimeDrinksProductService controller = new PrimeDrinksProductService();
+    	ProductService controller = new ProductService();
     
     	System.assertNotEquals(controller,null); 
     }
 
     @IsTest(SeeAllData=true) public static void testgetProductById() {
     	// Instantiate a new controller with all parameters in the page
-    	PrimeDrinksProductService controller = new PrimeDrinksProductService();
+    	ProductService controller = new ProductService();
 
         String accountIdTest = '0011i000006VDBYAA4';
 
@@ -28,7 +28,7 @@ public class PrimeDrinksProductServiceTest {
 
     @IsTest(SeeAllData=true) public static void testgetProductByIdInvalid() {
     	// Instantiate a new controller with all parameters in the page
-    	PrimeDrinksProductService controller = new PrimeDrinksProductService();
+    	ProductService controller = new ProductService();
 
         Product2 acc = null;
 
@@ -46,7 +46,7 @@ public class PrimeDrinksProductServiceTest {
 
     @IsTest(SeeAllData=true) public static void testgetProductByIdNull() {
     	// Instantiate a new controller with all parameters in the page
-    	PrimeDrinksProductService controller = new PrimeDrinksProductService();
+    	ProductService controller = new ProductService();
 
         Product2 acc = null;
 
@@ -63,7 +63,7 @@ public class PrimeDrinksProductServiceTest {
 
     @IsTest(SeeAllData=true) public static void testgetProductByIdEmpty() {
     	// Instantiate a new controller with all parameters in the page
-    	PrimeDrinksProductService controller = new PrimeDrinksProductService();
+    	ProductService controller = new ProductService();
 
         Product2 acc = null;
 
@@ -80,7 +80,7 @@ public class PrimeDrinksProductServiceTest {
 
     @IsTest(SeeAllData=true) public static void testGetAllActiveProducts() {
     	// Instantiate a new controller with all parameters in the page
-    	PrimeDrinksProductService controller = new PrimeDrinksProductService();
+    	ProductService controller = new ProductService();
 
         Wrappers.GetProductsWrapper acc = controller.getAllActiveProducts(1,0,'',null);
     
@@ -89,7 +89,7 @@ public class PrimeDrinksProductServiceTest {
 
     @IsTest(SeeAllData=true) public static void testgetOpportunityProducts() {
     	// Instantiate a new controller with all parameters in the page
-    	PrimeDrinksProductService controller = new PrimeDrinksProductService();
+    	ProductService controller = new ProductService();
 
         Wrappers.GetProductsWrapper acc = controller.getOpportunityProducts(1,0,'','0063X00000ysLbfQAE');
     
