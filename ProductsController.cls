@@ -1,11 +1,11 @@
-public with sharing class PrimeDrinksProductsController {
-    public PrimeDrinksProductsController() {
+public with sharing class ProductsController {
+    public ProductsController() {
 
     }
 
     @AuraEnabled
     public static string getAllProducts() {
-        PrimeDrinksProductService service = new PrimeDrinksProductService();
+        ProductService service = new ProductService();
 
         Wrappers.GetProductsWrapper products = service.getAllActiveProducts(1, 0, '', null);
 
@@ -14,7 +14,7 @@ public with sharing class PrimeDrinksProductsController {
 
     @AuraEnabled
     public static string getOpportunityProducts(string opportunityId) {
-        PrimeDrinksProductService service = new PrimeDrinksProductService();
+        ProductService service = new ProductService();
 
         Wrappers.GetProductsWrapper products = service.getOpportunityProducts(1, 0, null, opportunityId);
 
