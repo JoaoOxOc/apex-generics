@@ -1,6 +1,6 @@
-public with sharing class PrimeDrinksProductService  extends GenericSelector {
+public with sharing class ProductService  extends GenericSelector {
     public class ProductServiceException extends Exception{}
-    public PrimeDrinksProductService() {
+    public ProductService() {
         super('Product2');
     }
 
@@ -53,7 +53,7 @@ public with sharing class PrimeDrinksProductService  extends GenericSelector {
     public Wrappers.GetProductsWrapper getOpportunityProducts(Integer pageNumber, Integer pageSize, String productName, Id opportunityId) {
         Wrappers.GetProductsWrapper productsData = new Wrappers.GetProductsWrapper();
         try {
-            Set<String> productIds = new PrimeDrinksOppProductsService().getOppProductIds(opportunityId);
+            Set<String> productIds = new OppProductsService().getOppProductIds(opportunityId);
             String dataIn = 'Id In (';
             integer i = 0;
             integer size = productIds.size();
