@@ -1,7 +1,7 @@
-public with sharing class PrimeDrinksOppProductsService extends GenericSelector {
+public with sharing class OppProductsService extends GenericSelector {
     public class OppProductServiceException extends Exception{}
 
-    public PrimeDrinksOppProductsService() {
+    public OppProductsService() {
         super('OpportunityLineItem');
     }
 
