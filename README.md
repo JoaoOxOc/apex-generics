@@ -3,16 +3,16 @@ Generic class for Apex CRUD operations - the operations are developed with the b
 
 # how to use this
 the class that inherits the genericSelector class implements the specific logic for the SObject operations:
-- **PrimeDrinksProductService** is the class for Products2 SObject operations specific to the business logic, extending GenericSelector class
-- **PrimeDrinksProductsController** is the controller for the lightning component and it invokes the PrimeDrinksProductService class methods
-- **PrimeDrinksProductServiceTest** is the test class that covers both PrimeDrinksProductService (the implementation class) and GenericSelector methods invoked from the first one
+- **ProductService** is the class for Products2 SObject operations specific to the business logic, extending GenericSelector class
+- **ProductsController** is the controller for the lightning component and it invokes the ProductService class methods
+- **ProductServiceTest** is the test class that covers both ProductService (the implementation class) and GenericSelector methods invoked from the first one
 
 # example method
 ```
 public Wrappers.GetProductsWrapper getOpportunityProducts(Integer pageNumber, Integer pageSize, String productName, Id opportunityId) {
         Wrappers.GetProductsWrapper productsData = new Wrappers.GetProductsWrapper();
         try {
-            Set<String> productIds = new PrimeDrinksOppProductsService().getOppProductIds(opportunityId);
+            Set<String> productIds = new OppProductsService().getOppProductIds(opportunityId);
             String dataIn = 'Id In (';
             integer i = 0;
             integer size = productIds.size();
